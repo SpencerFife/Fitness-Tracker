@@ -24,9 +24,9 @@ mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost/fitnessdb`, {
 });
 
 //create server calls
-//start new workout (app.post)
+
 require("./routes/html-routes")(app);
-//
+require("./routes/api-routes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on http://localhost:${PORT}`);
